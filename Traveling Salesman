@@ -1,8 +1,11 @@
+
 # Python3 program to implement traveling salesman
 # problem using naive approach.
 from sys import maxsize
 from itertools import permutations
-V = 4
+import time as time 
+import matplotlib as plt
+
  
 # implementation of traveling Salesman Problem
 def travellingSalesmanProblem(graph, s):
@@ -33,12 +36,19 @@ def travellingSalesmanProblem(graph, s):
          
     return min_path
  
- 
-# Driver Code
-if __name__ == "__main__":
+L=[]
+for i in range (100):
+    V = i
+    start = time.time()
+    if __name__ == "__main__":
  
     # matrix representation of graph
-    graph = [[0, 10, 15, 20], [10, 0, 35, 25],
-            [15, 35, 0, 30], [20, 25, 30, 0]]
-    s = 0
-    print(travellingSalesmanProblem(graph, s))
+        graph = [[0, 10, 15, 20], [10, 0, 35, 25],
+                 [15, 35, 0, 30], [20, 25, 30, 0]]
+        s = 0
+        print(travellingSalesmanProblem(graph, s))
+    end = time.time()
+    elapsed = end - start
+    L.append(elapsed)
+    plt.plot(L)
+    plt.show
