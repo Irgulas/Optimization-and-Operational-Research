@@ -49,8 +49,18 @@ def generateSubsets(s:List[int], size:int, target_sum:int)->None:
         subset_sum(s, t, size, 0, 0, 0, target_sum)
  
 # Driver code
-weights = [15, 22, 14, 26, 32, 9, 16, 8]
-target = 53
-size = len(weights)
-generateSubsets(weights, size, target)
-print("Nodes generated ",total_nodes)
+L=[]
+Time = []
+for j in range (100):
+    start = timeit.default_timer()
+    weights = [15, 22, 14, 26, 32, 9, 16, 8]
+    target = j
+    size = len(weights)
+    generateSubsets(weights, size, target)
+    print("Nodes generated ",total_nodes)
+    end = timeit.default_timer()
+    elapsed = end - start
+    L.append(elapsed)
+    Time.append(j)
+plt.plot(Time,L)
+plt.show
