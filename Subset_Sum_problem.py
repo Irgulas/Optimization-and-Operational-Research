@@ -1,4 +1,6 @@
 from typing import List
+import timeit
+import matplotlib.pyplot as plt
  
 total_nodes = 0
  

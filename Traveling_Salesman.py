@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-
+import timeit
  
 # implementation of traveling Salesman Problem
 def travellingSalesmanProblem(graph, s):
@@ -11,6 +11,9 @@ def travellingSalesmanProblem(graph, s):
             vertex.append(i)
  
     # store minimum weight Hamiltonian Cycle
+
+# JVF: maxsize not defined
+
     min_path = maxsize
     next_permutation=permutations(vertex)
     for i in next_permutation:
@@ -34,6 +37,8 @@ L=[]
 Time = []
 for j in range (5):
     V = j
+
+
     start = timeit.default_timer()
     if __name__ == "__main__":
  
