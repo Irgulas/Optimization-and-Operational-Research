@@ -1,8 +1,7 @@
 ## Importation
 from ortools.linear_solver import pywraplp
 
-
-##Exercise 3
+##Function
 def LinearProgramming():
 
     solver = pywraplp.Solver.CreateSolver('GLOP')
